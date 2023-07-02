@@ -1,10 +1,9 @@
-'use client';
-
-import { useParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export default function SelectedClinetProjectPage() {
-  const params = useParams();
-  console.log(params);
+  const router = useRouter();
+  console.log(router.pathname);
+  console.log(router.query);
 
   return (
     <div>

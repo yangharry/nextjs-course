@@ -1,11 +1,9 @@
-'use client';
-
-import { useParams, useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 
 export default function ClinetProjectPage() {
-  const params = useParams();
   const router = useRouter();
-  console.log(params);
+  console.log(router.pathname);
+  console.log(router.query);
 
   function loadProjectHandler() {
     router.push('/clients/max/projecta');
