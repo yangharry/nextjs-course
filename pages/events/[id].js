@@ -4,6 +4,7 @@ import EventSummary from '@/components/event-detail/event-summary';
 import ErrorAlert from '@/components/ui/error-alert';
 // import { getEventById } from '@/dummy-data';
 import { getEventById, getAllEvents, getFeaturedEvents } from '@/helpers/api-util';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
@@ -24,6 +25,10 @@ export default function EventDetailPage(props) {
   }
   return (
     <Fragment>
+      <Head>
+        <title>{event.title}</title>
+        <meta name="description" content={event.description} />
+      </Head>
       <EventSummary title={event.title} />
       <EventLogistics date={event.date} address={event.location} image={event.image} imageAlt={event.title} />
       <EventContent>
