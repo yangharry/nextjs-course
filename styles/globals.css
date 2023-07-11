@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+ul {
+  padding: 0;
+}
+
 body {
   --color-grey-50: hsl(265, 55%, 96%);
   --color-grey-100: hsl(265, 19%, 88%);
