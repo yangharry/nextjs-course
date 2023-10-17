@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import classes from './post-item.module.css';
 
@@ -19,7 +19,7 @@ function PostItem(props) {
     <li className={classes.post}>
       <Link href={linkPath}>
         <div className={classes.image}>
-          <Image src={imagePath} alt={title} width={300} height={200} layout="responsive" />
+          <Image src={imagePath} alt={title} width="300" height="200" layout="responsive" />
         </div>
         <div className={classes.content}>
           <h3>{title}</h3>

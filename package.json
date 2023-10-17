@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "mongodb": "^5.7.0",
+    "gray-matter": "^4.0.3",
+    "mongodb": "^5.9.0",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.0",
+    "react-syntax-highlighter": "^15.5.0",
     "swr": "^2.2.0"
   }
 }
