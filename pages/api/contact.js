@@ -1,6 +1,4 @@
 import { MongoClient } from 'mongodb';
-import dotenv from 'dotenv';
-dotenv.config();
 
 async function handler(req, res) {
   if (req.method === 'POST') {
@@ -20,8 +18,9 @@ async function handler(req, res) {
 
     let client;
 
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@nextjs-course.wovfwnp.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
     try {
-      client = await MongoClient.connect(process.env.DB_URL);
+      client = await MongoClient.connect(connectionString);
     } catch (error) {
       res.status(500).json({ message: 'Could not connect to database' });
       return;
