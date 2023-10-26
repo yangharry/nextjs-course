@@ -10,14 +10,19 @@
     "export": "next export"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.3.1",
     "gray-matter": "^4.0.3",
     "mongodb": "^5.9.0",
     "next": "13.4.7",
+    "next-auth": "^4.23.2",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.0",
     "react-syntax-highlighter": "^15.5.0",
     "swr": "^2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "5.2.2"
   }
 }
